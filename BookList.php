@@ -16,7 +16,7 @@ $book = $statement->fetchAll(PDO::FETCH_OBJ);
   <div class="card mt-5">
     <div class="card-header w3-text-gray row">
     <div class="col-md-4"> <h2>ข้อมูลหนังสือ</h2> </div>
-    <div class="col-md-1 ml-auto"> <a href="#" class='btn w3-green'>เพิ่มหนังสือ</a> </div>
+    <div class="col-md-1 ml-auto"> <a href="BookAdd.php" class='btn w3-green'>เพิ่มหนังสือ</a> </div>
       
       <div align="right">
         
@@ -46,7 +46,7 @@ $book = $statement->fetchAll(PDO::FETCH_OBJ);
             <td>
               <a href="BookEdit.php?id=<?= $books->BookId ?>" class="btn w3-indigo">แก้ไข</a>
               <a onclick="return confirm('ต้องการลบหรือไม่?')" 
-              href="#" class='btn w3-red'>ลบ</a>
+              href="BookDelete.php?id=<?= $books->BookId ?>" class='btn w3-red'>ลบ</a>
             </td>
           </tr>
         <?php endforeach; ?>
