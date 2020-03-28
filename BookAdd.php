@@ -12,7 +12,7 @@ if (isset($_POST['BookName']) && isset($_POST['CategoryID']) && isset($_POST['Au
     $BookISBN = $_POST['BookISBN']; 
     $BookStatus = $_POST['BookStatus']; 
     $sql = "INSERT INTO books(BookName, CategoryID, AuthorID, PublisherID, BookDescription, BookPrice, BookNumPages, BookISBN, BookStatus)
-    VALUES('$BookName, '$CategoryID', '$AuthorID', '$PublisherID', '$BookDescription', '$BookPrice', '$BookNumPages', '$BookISBN', '$BookStatus')";
+    VALUES('$BookName', '$CategoryID', '$AuthorID', '$PublisherID', '$BookDescription', '$BookPrice', '$BookNumPages', '$BookISBN', '$BookStatus')";
     $statement = $connection->prepare($sql);
     if($statement->execute())   {
         header("Location: BookList.php");
